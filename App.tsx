@@ -1,18 +1,14 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
-import { Home } from './src/screens/Home';
-import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
+import { StatusBar} from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
-import { Login } from './src/screens/Login';
+import Routes from './src/routes';
+import { theme } from './src/theme';
+
 
 export default function App() {
-  const Tab = createBottomTabNavigator();
   return (
     <NavigationContainer>
-      <Tab.Navigator>
-        <Tab.Screen name="To-do" component={Home} />
-        <Tab.Screen name="User" component={Login} />
-      </Tab.Navigator>
+      <StatusBar backgroundColor={theme.colors.green} barStyle={'default'}/>
+      <Routes />
     </NavigationContainer>
   );
 }
