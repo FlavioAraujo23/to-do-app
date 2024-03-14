@@ -1,10 +1,12 @@
 import React from 'react'
 import { TextInput, View } from 'react-native'
-import { styles } from './styles/styles'
 
 const TextField = ({ ...inputProps }) => (
-  <View style={styles.container}>
-    <TextInput {...inputProps} style={styles.input} />
+  <View className="flex flex-col gap-2 pt-1 mb-2">
+    <TextInput
+      {...inputProps}
+      className="border-b border-b-gray-400/50 w-full focus:outline-none focus:border-b-green-500"
+    />
   </View>
 )
 
